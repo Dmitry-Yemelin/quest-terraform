@@ -9,6 +9,26 @@ provider "aws" {
   region = "us-east-1"
 }
 
+terraform {
+  backend "s3" {
+    bucket = "quest-terraform-node-ecs"
+    key = "dev"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 data "aws_ami" "latest_amazon_linux" {
   owners      = ["amazon"]
   most_recent = true
@@ -37,7 +57,7 @@ EOF
   }
 }
 */
-
+/*
 resource "aws_security_group" "webserver" {
   name   = "WebServer Security Group"
   vpc_id = data.terraform_remote_state.network.outputs.vpc_id
@@ -68,7 +88,7 @@ resource "aws_security_group" "webserver" {
   }
 }
 
-
+*/
 
 
 /*
@@ -105,7 +125,7 @@ output "network_details" {
 https://github.com/nelg/terraform-aws-acmdemo
 
 
-
+/*
 resource "aws_alb" "mylb" {
   # Normal ALB content, options removed for BLOG
   subnets         = module.vpc.public_subnets
@@ -172,3 +192,4 @@ resource "aws_security_group" "myapp" {
 }
 
 #=================================================================
+*/
